@@ -1,0 +1,16 @@
+
+ .u-section-1 {
+  background-image: linear-gradient(#fff6e6, #fedc99);
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 411px;
+}
+
+.success {
+  width: 100%;
+  padding: 13px;
+  background-color: #15B309;
+  border-radius: 4px;
+  color: #fff;
+}
