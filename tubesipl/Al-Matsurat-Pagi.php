@@ -37,7 +37,7 @@
         <meta property="og:type" content="website" />
     </head>
     <body class="u-body u-palette-1-base u-xl-mode" data-lang="en">
-        <header class="u-align-left u-clearfix u-header u-palette-3-light-1 u-header" id="sec-df73">
+        <header class="u-align-left u-clearfix u-header u-palette-3-light-1 u-header" id="sec-df73" style="background-color:#00cc99;">
             <div class="u-clearfix u-sheet u-sheet-1">
                 <h3 class="u-custom-font u-font-georgia u-text u-text-default u-text-1">eDzikr Campus</h3>
                 <nav class="u-align-left u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="MD">

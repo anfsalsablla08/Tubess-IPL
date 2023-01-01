@@ -11,6 +11,7 @@
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <title>Dashboard</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
         <link rel="stylesheet" href="assets/css/nicepage.css" media="screen" />
         <link rel="stylesheet" href="assets/css/dashboard.css" media="screen" />
         <script class="u-script" type="text/javascript" src="assets/js/jquery.js" defer=""></script>
@@ -26,12 +27,12 @@
             }
         </script>
 
-        <meta name="theme-color" content="#1948ff" />
+        <meta name="theme-color" content="#00cc99" />
         <meta property="og:title" content="Dashboard" />
         <meta property="og:type" content="website" />
     </head>
     <body class="u-body u-xl-mode" data-lang="en">
-        <header class="u-align-left u-clearfix u-header u-palette-3-light-1 u-header" id="sec-df73">
+        <header class="u-align-left u-clearfix u-header u-palette-3-light-1 u-header" id="sec-df73" style="background-color:#00cc99;">
             <div class="u-clearfix u-sheet u-sheet-1">
                 <h3 class="u-custom-font u-font-georgia u-text u-text-default u-text-1">eDzikr Campus</h3>
                 <nav class="u-align-left u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="MD">
@@ -109,6 +110,15 @@
                             <li class="u-nav-item">
                                 <a
                                     class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
+                                    href="Al-Quran.php"
+                                    style="padding: 10px 20px;"
+                                >
+                                    Al-Qur'an
+                                </a>
+                            </li>
+                            <li class="u-nav-item">
+                                <a
+                                    class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
                                     href="Jadwal-Sholat.php"
                                     style="padding: 10px 20px;"
                                 >
@@ -126,14 +136,15 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="u-nav-container-collapse">
-                        <div class="u-align-center u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-                            <div class="u-inner-container-layout u-sidenav-overflow">
+                    <div class="u-nav-container-collapse" >
+                        <div class="u-align-center u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav" >
+                            <div class="u-inner-container-layout u-sidenav-overflow" style="background-color:#00cc99;">
                                 <div class="u-menu-close"></div>
                                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
                                     <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Dashboard.php">Dashboard</a></li>
                                     <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Al-Matsurat-Pagi.php">Al-Matsurat Pagi</a></li>
                                     <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Al-Matsurat-Petang.php">Al-Matsurat Petang</a></li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Al-Quran.php">Al-Qur'an</a></li>
                                     <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Jadwal-Sholat.php">Jadwal Sholat</a></li>
                                 </ul>
                                 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="logout.php">Logout</a></li>
@@ -144,8 +155,8 @@
                 </nav>
             </div>
         </header>
-        <section class="u-clearfix u-gradient u-section-1" id="sec-5b2d">
             <div class="u-clearfix u-sheet u-sheet-1">
+                <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
                 <?php if(isset($_SESSION['login_success'])): ?>
                 <div class="success">
                     <?php echo $_SESSION['login_success']; ?>
@@ -153,25 +164,23 @@
                 <?php endif; ?>
                 <?php unset($_SESSION['login_success']); ?>
             </div>
+        <h3 class="text-center">Welcome to Dashboard</h3>
+        <div class="card border-info mb-5 mx-auto" style="max-width: 75%;">
+            <div class="card-header text-center"><h3>Sistem Infomasi - eDzikr Campus</h3></div> 
+            <div class="card-body text-info">
+                <h4 class="card-text" style="color: black;">Sistem Informasi Dzikir Pagi dan Petang ini akan merinci pengembangan proyek sistem informasi dzikir pagi dan petang yang akan berintegrasi berbasis perangkat keras dan perangkat lunak yang bertujuan sebagai penyedia fasilitas dakwah kampus</h4>
+            </div>
+        </div>
+    </div>
         </section>
-        <h3>Welcome to Dashboard</h3>
 
-        <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-4bb7">
+        
+
+        <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-4bb7" style="background-color: #00cc99;">
             <div class="u-clearfix u-sheet u-sheet-1">
                 <p class="u-small-text u-text u-text-variant u-text-1">KELOMPOK 1 - AIG 2020</p>
             </div>
         </footer>
-        <section class="u-backlink u-clearfix u-grey-80">
-            <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-                <span>Website Templates</span>
-            </a>
-            <p class="u-text">
-                <span>created with</span>
-            </p>
-            <a class="u-link" href="" target="_blank">
-                <span>Website Builder Software</span>
-            </a>
-            .
-        </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </body>
 </html>

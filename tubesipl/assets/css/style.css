@@ -24,11 +24,12 @@ body {
   margin-right: auto;
   margin-left: auto;
   border: 12px solid transparent;
-  border-bottom-color: #28d;
+  border-bottom-color: #00ff99;
+  color:  #00ff99;
 }
 
 .login-header {
-  background: #ff9933;
+  background: #00ff99;
   padding: 20px;
   font-size: 1.4em;
   font-weight: normal;
@@ -73,7 +74,7 @@ body {
 }
 
 .login input[type="submit"] {
-  background: #ff9933;
+  background: #00ff99;
   border-color: transparent;
   color: #fff;
   cursor: pointer;

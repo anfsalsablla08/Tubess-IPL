@@ -52,9 +52,8 @@ if(empty($data['email_error']) && empty($data['password_error'])){
 </head>
 <body>
 <div class="login">
-  <div class="login-triangle"></div>
   
-  <h2 class="login-header">Log In</h2>
+  <h2 class="login-header" style="background-color: #00cc99">Log In</h2>
 
   <form class="login-container" method="POST">
   	<?php 
@@ -77,7 +76,7 @@ if(empty($data['email_error']) && empty($data['password_error'])){
     		<?php echo $data['password_error']; ?>
     	<?php endif; ?>
     </div>
-    <p><input type="submit" name="login" value="Login"></p>
+    <p><input type="submit" name="login" value="Login" style="background-color: #00cc99;"></p>
     <p><a href="index.php">Create new account</a></p>
   </form>
 </div>

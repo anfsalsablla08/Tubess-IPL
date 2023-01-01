@@ -38,7 +38,7 @@
         <meta property="og:type" content="website" />
     </head>
     <body class="u-body u-xl-mode" data-lang="en">
-        <header class="u-align-left u-clearfix u-header u-palette-3-light-1 u-header" id="sec-df73">
+        <header class="u-align-left u-clearfix u-header u-palette-3-light-1 u-header" id="sec-df73" style="background-color:#00cc99;">
             <div class="u-clearfix u-sheet u-sheet-1">
                 <h3 class="u-custom-font u-font-georgia u-text u-text-default u-text-1">eDzikr Campus</h3>
                 <nav class="u-align-left u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="MD">
@@ -144,7 +144,7 @@
                     </div>
                     <div class="u-nav-container-collapse">
                         <div class="u-align-center u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-                            <div class="u-inner-container-layout u-sidenav-overflow">
+                            <div class="u-inner-container-layout u-sidenav-overflow" style="background-color:#00cc99;">
                                 <div class="u-menu-close"></div>
                                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
                                     <li class="u-nav-item"><a class="u-button-style u-nav-link" href="dashboard.php">Dashboard</a></li>

@@ -31,7 +31,7 @@
         <meta property="og:type" content="website" />
     </head>
     <body class="u-body u-xl-mode" data-lang="en">
-        <header class="u-align-left u-clearfix u-header u-palette-3-light-1 u-header" id="sec-df73">
+        <header class="u-align-left u-clearfix u-header u-palette-3-light-1 u-header" id="sec-df73" style="background-color:#00cc99;">
             <div class="u-clearfix u-sheet u-sheet-1">
                 <h3 class="u-custom-font u-font-georgia u-text u-text-default u-text-1">eDzikr Campus</h3>
                 <nav class="u-align-left u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="MD">
@@ -154,7 +154,7 @@
                 </nav>
             </div>
         </header>
-        <section class="u-clearfix u-gradient u-section-1" id="sec-5b2d">
+        <section class="u-clearfix u-white u-section-1" id="sec-5b2d">
             <div class="u-clearfix u-sheet u-sheet-1">
               <div class="container mt-5">
                 <div class="row card-surat-list">
@@ -164,7 +164,7 @@
               </div>
         </section>
 
-        <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-4bb7">
+        <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-4bb7" style="background-color:#00cc99;">
             <div class="u-clearfix u-sheet u-sheet-1">
                 <p class="u-small-text u-text u-text-variant u-text-1">KELOMPOK 1 - AIG 2020</p>
             </div>

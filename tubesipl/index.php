@@ -80,9 +80,7 @@ if (isset($_POST['signup'])) {
 </head>
 <body>
   <div class="login">
-  <div class="login-triangle"></div>
-  
-  <h2 class="login-header">Sign Up</h2>
+  <h2 class="login-header" style="background-color: #00cc99;">Sign Up</h2>
 
   <form class="login-container" method="POST">
     <p><input type="text" name="nama" placeholder="Nama" value="<?php if(!empty($data['nama'])): echo $data['nama']; endif; ?>"></p>
@@ -115,7 +113,7 @@ if (isset($_POST['signup'])) {
         <?php echo $data['confirm_error']; ?>
       <?php endif; ?>
     </div>
-    <p><input type="submit" name="signup" value="Create Account"></p>
+    <p><input type="submit" name="signup" value="Create Account" style="background-color: #00cc99;"></p>
     <p><a href="login.php">Already have an account?</a></p>
   </form>
 </div>
