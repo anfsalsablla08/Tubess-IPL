@@ -2,12 +2,6 @@
 <?php if(!isset($_SESSION['id'])): ?>
 <?php header("location:login.php"); ?>
 <?php endif; ?>
-<?php 
-  $sumber = 'http://localhost/tubesipl/assets/json/almatsurat-sugro.json';
-  $konten = file_get_contents($sumber);
-  $data = json_decode($konten, true);
-?>
-
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en">
     <head>
@@ -15,15 +9,15 @@
         <meta charset="utf-8" />
         <meta name="keywords" content="" />
         <meta name="description" content="" />
-        <title>Al-Matsurat Pagi</title>
+        <title>Jadwal Sholat</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+        <link rel="stylesheet" href="assets/css/Jadwal.css">
         <link rel="stylesheet" href="assets/css/nicepage.css" media="screen" />
-        <link rel="stylesheet" href="assets/css/Al-Matsurat-Pagi.css" media="screen" />
+        <link rel="stylesheet" href="assets/css/dashboard.css" media="screen" />
         <script class="u-script" type="text/javascript" src="assets/js/jquery.js" defer=""></script>
         <script class="u-script" type="text/javascript" src="assets/js/nicepage.js" defer=""></script>
         <meta name="generator" content="Nicepage 5.0.7, nicepage.com" />
         <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" />
-        <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" />
 
         <script type="application/ld+json">
             {
@@ -33,10 +27,10 @@
             }
         </script>
         <meta name="theme-color" content="#1948ff" />
-        <meta property="og:title" content="Al-Matsurat Pagi" />
+        <meta property="og:title" content="Dashboard" />
         <meta property="og:type" content="website" />
     </head>
-    <body class="u-body u-palette-1-base u-xl-mode" data-lang="en">
+    <body class="u-body u-xl-mode" data-lang="en">
         <header class="u-align-left u-clearfix u-header u-palette-3-light-1 u-header" id="sec-df73">
             <div class="u-clearfix u-sheet u-sheet-1">
                 <h3 class="u-custom-font u-font-georgia u-text u-text-default u-text-1">eDzikr Campus</h3>
@@ -84,7 +78,7 @@
                         </a>
                     </div>
                     <div class="u-nav-container">
-                   <ul class="u-nav u-spacing-2 u-unstyled u-nav-1">
+                        <ul class="u-nav u-spacing-2 u-unstyled u-nav-1">
                             <li class="u-nav-item">
                                 <a
                                     class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
@@ -102,7 +96,7 @@
                                 >
                                     Al-Matsurat Pagi
                                 </a>
-                            </li>  
+                            </li>
                             <li class="u-nav-item">
                                 <a
                                     class="u-active-grey-5 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90"
@@ -150,7 +144,7 @@
                                     <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Al-Matsurat-Pagi.php">Al-Matsurat Pagi</a></li>
                                     <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Al-Matsurat-Petang.php">Al-Matsurat Petang</a></li>
                                     <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Al-Quran.php">Al-Qur'an</a></li>
-                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Jadwal-Sholat.php">Jadwal Sholat</a></li>
+                                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Jadwal-Sholat">Jadwal Sholat</a></li>
                                 </ul>
                                 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="logout.php">Logout</a></li>
                             </div>
@@ -160,26 +154,51 @@
                 </nav>
             </div>
         </header>
-        <section class="u-clearfix u-white u-section-1" id="sec-310f">
+        <section class="u-clearfix u-gradient u-section-1" id="sec-5b2d">
             <div class="u-clearfix u-sheet u-sheet-1">
-                <div class="container mt-5">
-                  <div class="row">
-                    <div class="card" style="width : 100rem;">
-                    <?php foreach ($data as $row) {
-          
-                    ?>
-                        <h5 class="card-header" style="height: 2.5rem;"><?php echo $row['dzikr_name'] ?></h5>
-                        <div class="card-body">
-                        <h5 class="card-title text-end" style="font-size: 30px;"><?php echo $row['text'] ?></h5>
-                          <p class="card-text"><?php echo $row['trans'] ?></p>
-                          <span style="background-color: papayawhip;"><?php echo $row['note'] ?></span>
-                          
-                       </div>
-                   <?php } ?>    
-                  </div>
-                  </div>
+              <div class="container mt-5">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control input-search" placeholder="Cari Kota">
                 </div>
-            </div>
+
+                <div class="list-group card-list hidden-list">
+                 <!-- <a href="#" id="nama-kota" class="list-group-item list-group-item-action">Cimahi</a>
+                  <a href="#" id="nama-kota" class="list-group-item list-group-item-action">Jakarta</a>
+                  <a href="#" id="nama-kota" class="list-group-item list-group-item-action">Surabaya</a> -->
+                </div>
+
+                <div class="card mt-5">
+                <div class="card-header">
+                  <h4 class="text-center">Jadwal Sholat</h4>
+                </div>
+                <div class="card-body">
+                  <span class="judul-kota">Bandung</span>
+                  <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">Imsak <span class="badge badge-primary badge-pill imsak" style="background-color: blue;">14</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">Subuh
+                      <span class="badge badge-primary badge-pill subuh" style="background-color: blue;">2</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">Terbit
+                      <span class="badge badge-primary badge-pill terbit" style="background-color: blue;">1</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">Dzuhur
+                      <span class="badge badge-primary badge-pill dzuhur" style="background-color: blue;">1</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">Ashar
+                      <span class="badge badge-primary badge-pill ashar" style="background-color: blue;">1</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">Maghrib
+                      <span class="badge badge-primary badge-pill maghrib" style="background-color: blue;">1</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">Isya
+                      <span class="badge badge-primary badge-pill isya" style="background-color: blue;">1</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-footer text-muted tanggal">05 Desember 2022</div>
+              </div>
+              </div>
         </section>
 
         <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-4bb7">
@@ -187,8 +206,7 @@
                 <p class="u-small-text u-text u-text-variant u-text-1">KELOMPOK 1 - AIG 2020</p>
             </div>
         </footer>
-        <section class="u-backlink u-clearfix u-grey-80"></section>
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="assets/js/jadwal.js"></script>
     </body>
 </html>
